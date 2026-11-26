@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Discover refined fragrances at Hamza Fragrance. Shop premium scents for every occasion.">
+<title>Hamza Fragrance | The Art of Luxury</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="announcement">COMPLIMENTARY DELIVERY ON ORDERS OVER Rs. 5,000 <span>✦</span> DISCOVER YOUR SIGNATURE SCENT</div>
+<header class="header">
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+  <a class="brand" href="#" data-page="home"><span class="brand-mark">HF</span><span>HAMZA <b>FRAGRANCE</b><small>THE ART OF LUXURY</small></span></a>
+  <nav class="nav" id="nav">
+    <a href="#" data-page="home" class="active">Home</a><a href="#" data-page="shop">Shop</a><a href="#" data-page="collections">Collections</a><a href="#" data-page="about">Our Story</a><a href="#" data-page="contact">Contact</a>
+  </nav>
+  <div class="header-actions"><button id="searchToggle" aria-label="Search">⌕</button><button data-page="wishlist" aria-label="Wishlist">♡ <sup id="wishCount">0</sup></button><button data-page="cart" aria-label="Cart">♧ <sup id="cartCount">0</sup></button></div>
+</header>
+<div class="search-bar hidden" id="searchBar"><input id="searchInput" placeholder="Search fragrances, notes, collections..."><button id="searchGo">Search</button></div>
+<main id="app"></main>
+<footer class="footer">
+ <div class="footer-top"><div><a class="brand footer-brand" href="#" data-page="home"><span class="brand-mark">HF</span><span>HAMZA <b>FRAGRANCE</b><small>THE ART OF LUXURY</small></span></a><p>Fragrance is the art of making memories linger.</p><div class="socials">Instagram&nbsp;&nbsp; Facebook&nbsp;&nbsp; TikTok</div></div>
+ <div><h4>EXPLORE</h4><a href="#" data-page="shop">Shop All</a><a href="#" data-page="collections">Collections</a><a href="#" data-page="about">Our Story</a><a href="#" data-page="contact">Contact</a></div>
+ <div><h4>CLIENT CARE</h4><a href="#" data-page="faq">FAQs</a><a href="#" data-page="shipping">Shipping Policy</a><a href="#" data-page="returns">Returns & Refunds</a><a href="#" data-page="privacy">Privacy Policy</a><a href="#" data-page="terms">Terms & Conditions</a></div>
+ <div><h4>THE SCENT LETTER</h4><p>Join our list for new launches and special offers.</p><form id="newsletter"><input type="email" placeholder="Your email address" required><button class="gold-btn">Subscribe</button></form></div></div>
+ <div class="footer-bottom"><span>© 2026 Hamza Fragrance. All rights reserved.</span><span>Designed with intention ✦ Prices in PKR</span></div></footer>
+<div class="toast" id="toast"></div><div class="modal hidden" id="modal"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
+<script src="app.js"></script></body></html>
