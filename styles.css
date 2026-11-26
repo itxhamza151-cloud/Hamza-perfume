@@ -8,3 +8,17 @@ h1,h2,h3,h4,.brand,.product-info h3,.detail-copy h1,.promo-copy h2,.category h3,
 .header-actions .cart-header-btn{display:inline-flex;align-items:center;gap:5px}
 .card-actions button:first-child{display:flex;align-items:center;justify-content:center;gap:8px}
 .add-cart-icon{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* WhatsApp checkout */
+.checkout-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.8fr);gap:28px;max-width:1050px;margin:0 auto;align-items:start}
+.checkout-form,.checkout-summary{background:#fff;border:1px solid var(--line);padding:28px}
+.checkout-form h2,.checkout-summary h2{font:600 22px 'Inter',sans-serif;margin:0 0 22px}
+.checkout-form .form-grid{gap:14px}
+.checkout-form textarea{resize:vertical;min-height:90px}
+.checkout-hint{font-size:12px;margin:18px 0 4px}
+.order-submit{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px}
+.checkout-summary{background:var(--cream)}
+.checkout-item,.checkout-total,.checkout-grand{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:12px}
+.checkout-grand{font-size:16px;font-weight:700;border-bottom:0;padding-top:20px}
+.checkout-summary>p{font-size:11px}
+@media(max-width:700px){.checkout-layout{grid-template-columns:1fr}.checkout-form,.checkout-summary{padding:20px}.checkout-form .form-grid{grid-template-columns:1fr}.checkout-form .form-grid .wide{grid-column:auto}}
