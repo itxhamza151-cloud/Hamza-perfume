@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hamza Fragrance | Store Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="admin-header"><a class="brand" href="/"><span class="brand-mark">HF</span><span>HAMZA <b>FRAGRANCE</b><small>STORE ADMIN</small></span></a><button id="logoutBtn" class="btn btn-light hidden">Sign out</button></header>
+<main class="admin-shell">
+<section id="setupNotice" class="panel notice hidden"><h1>Connect your store database</h1><p>Supabase is not configured yet. Add your project URL and publishable anon key in <code>supabase-config.js</code>, then run <code>supabase/schema.sql</code> in your Supabase SQL Editor.</p></section>
+<section id="loginPanel" class="panel login-panel"><p class="eyebrow">HAMZA FRAGRANCE</p><h1>Store Admin</h1><p class="muted">Sign in with your authorized store administrator account.</p><form id="loginForm"><label>Email</label><input id="adminEmail" type="email" required autocomplete="username"><label>Password</label><input id="adminPassword" type="password" required autocomplete="current-password"><button class="btn btn-gold">Sign in securely</button><p id="loginError" class="error" role="alert"></p></form></section>
+<section id="dashboard" class="hidden">
+<div class="welcome"><div><p class="eyebrow">STORE CONTROL</p><h1>Dashboard</h1><p class="muted">Manage your fragrance catalogue and customer orders.</p></div><button id="addProductBtn" class="btn btn-gold">+ Add product</button></div>
+<div class="stats"><article class="stat"><span>Total orders</span><b id="statOrders">—</b></article><article class="stat"><span>Pending orders</span><b id="statPending">—</b></article><article class="stat"><span>Products</span><b id="statProducts">—</b></article><article class="stat"><span>Low stock (5 or less)</span><b id="statLowStock">—</b></article></div>
+<section class="panel"><div class="panel-head"><h2>Recent orders</h2><button id="refreshBtn" class="btn btn-light">Refresh</button></div><div class="table-wrap"><table><thead><tr><th>Order</th><th>Customer</th><th>Total</th><th>Status</th><th>Date</th></tr></thead><tbody id="ordersBody"><tr><td colspan="5">Loading…</td></tr></tbody></table></div></section>
+<section class="panel"><div class="panel-head"><h2>Products & stock</h2><span class="muted">Edit prices, stock and visibility</span></div><div class="table-wrap"><table><thead><tr><th>Product</th><th>Price (PKR)</th><th>Stock</th><th>Visible</th><th>Action</th></tr></thead><tbody id="productsBody"><tr><td colspan="5">Loading…</td></tr></tbody></table></div></section>
+</section>
+</main>
+<dialog id="productDialog"><form id="productForm" method="dialog"><div class="panel-head"><h2 id="productDialogTitle">Add product</h2><button type="button" id="closeProductDialog" class="btn btn-light">Close</button></div><input type="hidden" id="productId"><label>Product name</label><input id="productName" required maxlength="100"><label>Brand</label><input id="productBrand" required maxlength="100"><label>Category</label><select id="productCategory"><option>Men</option><option>Women</option><option>Unisex</option></select><div class="two-col"><div><label>Price (PKR)</label><input id="productPrice" type="number" min="0" required></div><div><label>Compare-at price (PKR)</label><input id="productCompare" type="number" min="0"></div></div><div class="two-col"><div><label>Stock quantity</label><input id="productStock" type="number" min="0" required></div><div><label>Tag</label><input id="productTag" maxlength="30"></div></div><label>Fragrance notes</label><input id="productNotes" maxlength="300"><label>Description</label><textarea id="productDescription" rows="3"></textarea><label>Product image URL</label><input id="productImage" type="url" required><label class="check"><input id="productActive" type="checkbox" checked> Visible in shop</label><button class="btn btn-gold">Save product</button><p id="productError" class="error"></p></form></dialog>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script><script src="admin.js"></script>
+</body></html>
