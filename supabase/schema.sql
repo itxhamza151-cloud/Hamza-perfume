@@ -100,7 +100,7 @@ set search_path = public
 as $$
 declare
   v_order_id uuid;
-  v_order_number text := 'HF-' || upper(substr(encode(gen_random_bytes(5), 'hex'), 1, 8));
+  v_order_number text := 'HF-' || upper(substr(replace(gen_random_uuid()::text, '-', ''), 1, 8));
   v_subtotal integer := 0;
   v_delivery integer;
   v_total integer;
