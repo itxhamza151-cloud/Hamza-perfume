@@ -1,4 +1,4 @@
-// Supabase project settings. Use the Project URL and publishable (anon) key only.
-// Never put a service_role key in browser code.
-window.HF_SUPABASE_URL = "";
-window.HF_SUPABASE_ANON_KEY = "";
+// Hamza Fragrance Supabase project settings.
+// Browser-safe publishable key only; never expose service_role keys.
+window.HF_SUPABASE_URL = "https://bnjxnmilpwkibjbhtfwg.supabase.co";
+window.HF_SUPABASE_ANON_KEY = "sb_publishable_pf0LNbFVrYI0HdQPlzDjOA_b-9rF9sY";
